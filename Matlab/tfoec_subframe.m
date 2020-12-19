@@ -26,9 +26,13 @@ cp_type=peak.cp_type;
 nRB = peak.n_rb_dl;
 
 if nRB == 6
-    decimation_ratio = 16;
+  decimation_ratio = 16;
+elseif nRB == 50
+  decimation_ratio = 4;
+elseif nRB == 75
+  decimation_ratio = 4;
 elseif nRB == 100
-    decimation_ratio = 1;
+  decimation_ratio = 1;
 else
     disp('nRB must be 6 or 100!');
     return;
